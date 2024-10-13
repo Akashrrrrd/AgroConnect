@@ -1,0 +1,25 @@
+.breadcrum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #b2d8b2;
+    height: 60vh;
+  }
+  
+  .breadcrum-text {
+    max-width: 50%;
+    margin-left: 15rem;
+  }
+  
+  .breadcrum-text h1 {
+    font-size: 3.5rem;
+    color: #006400;
+  }
+  
+  .breadcrum-image img {
+    width: 400px;
+    height: auto;
+    margin-right: 15rem;
+  }
+  

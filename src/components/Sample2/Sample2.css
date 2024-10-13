@@ -1,0 +1,42 @@
+.sample2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #d7ff76;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+  
+  .sample2-content {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .sample2-content h1 {
+    font-size: 2.5em;
+    color: #004d00;
+    margin-bottom: 20px;
+    margin-left: 60px;
+  }
+  
+  .sample2-content p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.5;
+    margin-left: 60px;
+  }
+  
+  .sample2-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sample2-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,76 @@
+.connectnow {
+    text-align: center;
+    padding: 100px 70px;
+    background: linear-gradient(135deg, #f2f4f3 40%, #fdfbf9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.7s ease-out forwards;
+    margin: 80px auto;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.connectnow h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2f4f22;
+    letter-spacing: 1px;
+    animation: slideIn 1s ease-out forwards;
+    text-transform: none; 
+}
+
+.connectnow h1 span {
+    color: #66bb6a;
+    font-style: normal;
+}
+
+.connectnow p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.connectnow button {
+    background: linear-gradient(135deg, #8bc34a, #689f38);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s ease-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.connectnow button:hover {
+    background: linear-gradient(135deg, #689f38, #558b2f);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,86 @@
+.scrollbar-container {
+  width: 90%;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(34, 34, 34, 0.1);
+  background-color: #f9f9f6; /* Soft, natural background */
+  border: 2px solid #d4e4d4; /* Subtle border for organic feel */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.scrollbar-container:hover {
+  box-shadow: 0 8px 16px rgba(34, 34, 34, 0.15); /* Elevate on hover */
+}
+
+.scrollbar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Softer shadow around image */
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrollbar-image:hover {
+  transform: scale(1.02); /* Slight zoom for a lively effect */
+}
+
+.scrollbar-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(44, 95, 45, 0.8); /* Earthy green background */
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scrollbar-nav:hover {
+  background-color: rgba(44, 95, 45, 1);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.scrollbar-nav.left {
+  left: 15px;
+  top: 280px;
+  border-radius: 50px;
+  border: 3px solid rgba(44, 95, 45, 0.7);
+}
+
+.scrollbar-nav.right {
+  right: 15px;
+  top: 280px;
+  border-radius: 50px;
+  border: 3px solid rgba(44, 95, 45, 0.7);
+}
+
+.scrollbar-nav:focus {
+  outline: none;
+}
+
+.scrollbar-nav:active {
+  background-color: rgba(34, 75, 35, 1); /* Darker green for active state */
+}
+
+@media (max-width: 480px) {
+  .scrollbar-container {
+      width: 95%; /* Slightly adjust width for mobile */
+      padding: 30px;
+  }
+
+  .scrollbar-nav.left, .scrollbar-nav.right {
+      top: 250px; /* Adjust position on smaller screens */
+  }
+}

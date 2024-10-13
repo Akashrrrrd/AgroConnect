@@ -1,0 +1,275 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --soil-brown: #8B4513;
+  --leaf-green: #4CAF50;
+  --sky-blue: #87CEEB;
+  --sunshine-yellow: #FFD700;
+  --cloud-white: #FFFFFF;
+  --bark-brown: #5D4037;
+}
+
+/* General page styles */
+.nf-page {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nf-heading {
+  font-family: 'Lora', serif;
+  font-size: 3.5em;
+  color: var(--soil-brown);
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.nf-heading::after {
+  content: '🌱';
+  font-size: 0.5em;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nf-info {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
+  color: var(--bark-brown);
+}
+
+/* Farm list styling */
+.nf-farm-list {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.nf-farm-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nf-farm-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--leaf-green), var(--sunshine-yellow), var(--sky-blue));
+}
+
+.nf-farm-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nf-farm-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nf-farm-item:hover .nf-farm-image {
+  transform: scale(1.05);
+}
+
+.nf-farm-name {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  color: var(--soil-brown);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.nf-farm-address, .nf-farm-distance, .nf-farm-organic, .nf-farm-details, .nf-farm-contact, .nf-farmer-name, .nf-farmer-mobile {
+  font-size: 1.1em;
+  margin: 8px 0;
+  text-align: center;
+  color: var(--bark-brown);
+}
+
+/* New: Mobile number and contact name styling */
+.nf-farm-contact-name, .nf-farm-contact-number {
+  font-size: 1.2em;
+  color: var(--leaf-green);
+  margin: 10px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nf-farm-organic {
+  color: var(--leaf-green);
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.nf-view-map {
+  background-color: var(--leaf-green);
+  color: var(--cloud-white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nf-view-map:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nf-farm-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .nf-heading {
+    font-size: 2.8em;
+  }
+  
+  .nf-info {
+    font-size: 1.1em;
+  }
+}
+
+/* Organic shape animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.organic-shape {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(135, 206, 235, 0.1));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
+  animation: float 15s ease-in-out infinite;
+}
+
+.organic-shape:nth-child(1) {
+  top: -150px;
+  left: -150px;
+}
+
+.organic-shape:nth-child(2) {
+  bottom: -150px;
+  right: -150px;
+  animation-delay: -7.5s;
+}
+
+.nf-map {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px; 
+}
+
+.nf-watch-live {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nf-watch-live:hover {
+  background-color: #0062cc; /* Darker blue on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.live-stream-modal {
+  position: relative;
+  max-width: 1200px; /* Reduced width */
+  width: 90%; /* Responsive width */
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.live-stream-container {
+  margin: 20px 0;
+  position: relative; /* For aspect ratio control */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.live-stream-container iframe {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+  border: none; /* Remove border */
+}
+
+.close-button {
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+  margin-top: 20px; /* Space above button */
+}
+
+.close-button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+@media (max-width: 600px) {
+  .live-stream-modal {
+    max-width: 100%; /* Full width on small screens */
+  }
+
+  .live-stream-container iframe {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .close-button {
+    width: 100%; /* Full width button */
+    margin-top: 15px; /* Adjust spacing */
+  }
+}
