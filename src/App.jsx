@@ -30,6 +30,8 @@ import Wishlist from './pages/Wishlist/Wishlist';
 import OrderHistory from './pages/OrderHistory/OrderHistory';
 import AI from './pages/AI/AI';
 import FAQ from './components/FAQ/FAQ';
+import Contact from './components/Contact/Contact';
+import Partners from './components/Partners/Partners';
 
 const App = () => {
   const [cartItems, setCartItems] = useState(() => {
@@ -114,6 +116,8 @@ const App = () => {
         <Route path='/wishlist' element={<Wishlist/>}/>
         <Route path='/order-history' element={<OrderHistory/>}/>
         <Route path='/ask-ai' element={<AI/>}/>
+        <Route path='/partners' element={<Partners/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </Router>
   );

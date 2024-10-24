@@ -43,7 +43,7 @@ const OrderHistory = () => {
                     <img src={item.image} alt={item.name} className="order-item-image" />
                     <div className="item-details">
                       <p>{item.name}</p>
-                      <p>Price: ₹{item.price}</p>
+                      <p>Price: {item.price}</p>
                       <p>Quantity: {item.quantity}</p>
                       <p>Subtotal: ₹{(item.quantity * parseFloat(item.price.replace('₹', ''))).toFixed(2)}</p>
                     </div>

@@ -1,8 +1,76 @@
+/* Import the font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit";
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Global Styles */
+body {
+  background: #f1f8e9; /* Soft, calming light green background */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px; /* Optimized for balance between usability and aesthetics */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #e8f5e9, #c8e6c9); /* Soft green gradient */
+  border-radius: 10px; /* Slight rounding for smooth, sleek design */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Add subtle depth */
+}
+
+/* Handle (scrollbar thumb) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #66bb6a, #43a047); /* Deeper green with an elegant fade */
+  border-radius: 10px; /* Rounded corners for smooth scrolling experience */
+  border: 2px solid #e8f5e9; /* Lighter border for better thumb-track integration */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for hover/active effects */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #81c784, #388e3c); /* Slight color change for hover effect */
+  border-color: #c8e6c9; /* Softer hover effect */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background: linear-gradient(180deg, #dcedc8, #a5d6a7); /* Subtle darkening on hover */
+}
+
+/* Handle on active (clicking or dragging the scrollbar) */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #43a047, #2e7d32); /* Darker green on interaction */
+  border-color: #e0f7e9; /* Retain light border for a smooth look */
+}
+
+/* Custom Scrollbar for Mozilla Firefox */
+html {
+  scrollbar-width: thin; /* Thin scrollbar for modern look */
+  scrollbar-color: #66bb6a #e8f5e9; /* Colors similar to the webkit scrollbar */
+}
+
+/* Adding subtle background texture */
+body {
+  background: linear-gradient(135deg, #f1f8e9, #e8f5e9); /* Gentle, natural gradients */
+}
+
+/* Keyframes for smooth thumb animation */
+@keyframes thumbScroll {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subtle animations for smooth scrolling */
+::-webkit-scrollbar-thumb {
+  animation: thumbScroll 8s ease-in-out infinite; /* Slow, smooth animation */
 }

@@ -15,10 +15,11 @@ import { db } from "../../../firebaseConfig";
 const NavBarMenu = ({ role }) => (
   <ul>
     <li><Link to="/" className="navbar-link">Home</Link></li>
-    <li><Link to="/best-deals" className="navbar-link">Best Deals</Link></li>
+    <li><Link to="/best-deals" className="navbar-link">Products</Link></li>
     {role === "seller" && <li><Link to="/dashboard" className="navbar-link">Dashboard</Link></li>}
-    {role === "customer" && <li><Link to="/order-history" className="navbar-link">Order History</Link></li>}
-    <li><Link to="/footer" className="navbar-link">Contact</Link></li>
+    {role === "customer" && <li><Link to="/order-history" className="navbar-link">Orders</Link></li>}
+    <li><Link to="/partners" className="navbar-link">Partners</Link></li>
+    <li><Link to="/contact" className="navbar-link">Contact</Link></li>
   </ul>
 );
 
