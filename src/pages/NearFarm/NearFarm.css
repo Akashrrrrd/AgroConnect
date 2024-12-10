@@ -1,13 +1,13 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
 
 :root {
-  --soil-brown: #8B4513;
-  --leaf-green: #4CAF50;
-  --sky-blue: #87CEEB;
-  --sunshine-yellow: #FFD700;
-  --cloud-white: #FFFFFF;
-  --bark-brown: #5D4037;
+  --soil-brown: #8b4513;
+  --leaf-green: #4caf50;
+  --sky-blue: #87ceeb;
+  --sunshine-yellow: #ffd700;
+  --cloud-white: #ffffff;
+  --bark-brown: #5d4037;
 }
 
 /* General page styles */
@@ -19,17 +19,17 @@
 }
 
 .nf-heading {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-size: 3.5em;
   color: var(--soil-brown);
   margin-bottom: 30px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
 .nf-heading::after {
-  content: '🌱';
+  content: "🌱";
   font-size: 0.5em;
   position: absolute;
   bottom: -10px;
@@ -60,7 +60,7 @@
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,13 +70,18 @@
 }
 
 .nf-farm-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, var(--leaf-green), var(--sunshine-yellow), var(--sky-blue));
+  background: linear-gradient(
+    90deg,
+    var(--leaf-green),
+    var(--sunshine-yellow),
+    var(--sky-blue)
+  );
 }
 
 .nf-farm-item:hover {
@@ -86,7 +91,7 @@
 
 .nf-farm-image {
   width: 100%;
-  height: 200px;
+  height: 260px;
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 20px;
@@ -99,14 +104,20 @@
 }
 
 .nf-farm-name {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-size: 2em;
   color: var(--soil-brown);
   margin: 0 0 15px 0;
   text-align: center;
 }
 
-.nf-farm-address, .nf-farm-distance, .nf-farm-organic, .nf-farm-details, .nf-farm-contact, .nf-farmer-name, .nf-farmer-mobile {
+.nf-farm-address,
+.nf-farm-distance,
+.nf-farm-organic,
+.nf-farm-details,
+.nf-farm-contact,
+.nf-farmer-name,
+.nf-farmer-mobile {
   font-size: 1.1em;
   margin: 8px 0;
   text-align: center;
@@ -114,7 +125,8 @@
 }
 
 /* New: Mobile number and contact name styling */
-.nf-farm-contact-name, .nf-farm-contact-number {
+.nf-farm-contact-name,
+.nf-farm-contact-number {
   font-size: 1.2em;
   color: var(--leaf-green);
   margin: 10px 0;
@@ -156,11 +168,11 @@
   .nf-farm-list {
     grid-template-columns: 1fr;
   }
-  
+
   .nf-heading {
     font-size: 2.8em;
   }
-  
+
   .nf-info {
     font-size: 1.1em;
   }
@@ -168,16 +180,26 @@
 
 /* Organic shape animation */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .organic-shape {
   position: fixed;
   width: 300px;
   height: 300px;
-  background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(135, 206, 235, 0.1));
+  background: linear-gradient(
+    45deg,
+    rgba(76, 175, 80, 0.1),
+    rgba(135, 206, 235, 0.1)
+  );
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: -1;
   animation: float 15s ease-in-out infinite;
@@ -197,7 +219,7 @@
 .nf-map {
   margin-top: 20px;
   width: 100%;
-  height: 400px; 
+  height: 400px;
 }
 
 .nf-watch-live {

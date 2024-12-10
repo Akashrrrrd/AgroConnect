@@ -6,6 +6,9 @@ import L from "leaflet";
 import farm_1 from "../../assets/farm_1.png";
 import farm_2 from "../../assets/farm_2.png";
 import farm_3 from "../../assets/farm_3.png";
+import farmers_1 from "../../assets/farmers_1.png";
+import farmers_2 from "../../assets/farmers_2.png";
+import farmers_3 from "../../assets/farmers_3.png";
 import Modal from "react-modal"; // Import modal for live stream
 
 // Fix Leaflet's default marker icons issue
@@ -57,43 +60,45 @@ const NearFarm = () => {
 
   const farms = [
     {
-      name: "Pachai Malai Farm",
-      address: "123 Kovil Road, Salem",
-      image: farm_1,
+      name: "Unnamed Farm",
+      address: "Unnmaed Road, kerala 685565, India",
+      image: farmers_1,
       organic: true,
-      contact: "contact@pachaimalai.com",
+      contact: "info@unnamed.com",
       details: "Known for their fresh, organic vegetables and fruits.",
-      farmerName: "Murugan K.",
+      farmerName: "Unnamed",
       farmerMobile: "+919876543210",
-      lat: 11.6643,
-      lng: 78.146,
-      liveStreamUrl: "https://www.youtube.com/embed/F64e9Sdm4f0", // Replace with actual video ID
+      lat: 9.97634,
+      lng: 77.13239333333333,
+      liveStreamUrl: "https://www.youtube.com/embed/F64e9Sdm4f0",
     },
     {
-      name: "Surya Farms",
-      address: "456 Vayal Veedu, Coimbatore",
-      image: farm_2,
-      organic: false,
-      contact: "info@suryafarms.com",
-      details: "Specializes in seasonal produce and flowers.",
-      farmerName: "Ravi Kumar S.",
-      farmerMobile: "+919998877665",
-      lat: 11.0168,
-      lng: 76.9558,
-      liveStreamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk?si=c44dQ3zIi4_iptJP", // Replace with actual video ID
-    },
-    {
-      name: "Manvasanai Farm",
-      address: "789 Thoppu Lane, Madurai",
-      image: farm_3,
+      name: "Unnamed Farm",
+      address: "Unnmaed Road, kerala 685565, India",
+      image: farmers_2,
       organic: true,
-      contact: "hello@manvasanai.com",
+      contact: "info@unfarmed.com",
+      details: "Specializes in seasonal produce and flowers.",
+      farmerName: "Unnamed",
+      farmerMobile: "+919998877665",
+      lat: 9.976346666666666,
+      lng: 77.13244,
+      liveStreamUrl:
+        "https://www.youtube.com/embed/jfKfPfyJRdk?si=c44dQ3zIi4_iptJP", // Replace with actual video ID
+    },
+    {
+      name: "Unnamed Farm",
+      address: "Unnmaed Road, kerala 685565, India",
+      image: farmers_3,
+      organic: true,
+      contact: "info@unnamed.com",
       details: "Provides a wide range of certified organic products.",
-      farmerName: "Lakshmanan P.",
+      farmerName: "Unnamed",
       farmerMobile: "+914455667788",
-      lat: 9.9252,
-      lng: 78.1198,
-      liveStreamUrl: "https://www.youtube.com/embed/xRPjKQtRXR8?si=oxxqzM_4j_Be-TGb", // Replace with actual video ID
+      lat: 9.97637,
+      lng: 77.13240666666667,
+      liveStreamUrl:
+        "https://www.youtube.com/embed/xRPjKQtRXR8?si=oxxqzM_4j_Be-TGb", // Replace with actual video ID
     },
   ];
 

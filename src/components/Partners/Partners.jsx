@@ -1,5 +1,5 @@
-import React from 'react';
-import './Partners.css';
+import React from "react";
+import "./Partners.css";
 import partners_1 from "./../../assets/partners_1.png";
 import partners_2 from "./../../assets/partners_2.png";
 import partners_3 from "./../../assets/partners_3.png";
@@ -11,10 +11,13 @@ const Partners = () => {
     <div className="partners-container">
       <h1 className="partners-heading">Our Trusted Partners</h1>
       <p className="partners-description">
-        AgroConnect brings together the best partners to ensure seamless delivery of fresh and affordable produce.
+        AgroConnect brings together the best partners to ensure seamless
+        delivery of fresh and affordable produce.
       </p>
       <p className="partners-message">
-        As a platform created with the heart of farmers in mind, we strive to bring you closer to trusted partners who are as committed to freshness and quality as you are.
+        As a platform created with the heart of farmers in mind, we strive to
+        bring you closer to trusted partners who are as committed to freshness
+        and quality as you are.
       </p>
 
       <div className="partners-grid">
@@ -33,10 +36,6 @@ const Partners = () => {
         <div className="partner-card">
           <img src={partners_4} alt="Partner 4" className="partner-image" />
           <h3 className="partner-name">Porter</h3>
-        </div>
-        <div className="partner-card">
-          <img src={partners_5} alt="Partner 5" className="partner-image" />
-          <h3 className="partner-name">XpressBees</h3>
         </div>
       </div>
     </div>
