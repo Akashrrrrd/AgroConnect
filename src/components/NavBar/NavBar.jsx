@@ -11,7 +11,7 @@ import { auth } from "../../../firebaseConfig";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
-import logo_img from './../../../Logo_img.png';
+import logo_img from "./../../../Logo_img.png";
 
 const NavBarMenu = ({ role }) => (
   <ul>
