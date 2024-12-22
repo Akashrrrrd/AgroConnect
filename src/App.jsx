@@ -32,13 +32,23 @@ import AI from "./pages/AI/AI";
 import FAQ from "./components/FAQ/FAQ";
 import Contact from "./components/Contact/Contact";
 import Partners from "./components/Partners/Partners";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop"; // Import the ScrollToTop component
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   const [cartItems, setCartItems] = useState(() => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
   });
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Simulates a loading delay of 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
@@ -76,9 +86,17 @@ const App = () => {
     0
   );
 
+  if (isLoading) {
+    return (
+      <div id="loader">
+        <div className="plant"></div>
+      </div>
+    );
+  }
+
   return (
     <Router>
-      <ScrollToTop /> {/* Add ScrollToTop component */}
+      <ScrollToTop />
       <NavBar cartItemCount={cartItemCount} />
       <Routes>
         <Route

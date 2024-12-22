@@ -1,84 +1,59 @@
-/* Import the font */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-/* Ensure no text decoration globally */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
-  text-decoration: none; /* No text decoration for all elements */
+  text-decoration: none;
 }
 
-/* Optional: Specific text-decoration for links */
 a {
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Optional: Matches the color to the parent element */
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    #f4fcf6,
-    /* Very light green */ #edf9f0 /* Soft pale green */
-  );
+  background: linear-gradient(135deg, #f4fcf6, #edf9f0);
   line-height: 1.6;
-  color: #2c3e50; /* Neutral dark text color for readability */
+  color: #2c3e50;
 }
 
-/* Scrollbar Styling with Advanced Design */
 ::-webkit-scrollbar {
-  width: 12px; /* Slightly wider for enhanced visibility */
+  width: 12px;
   background: transparent;
 }
 
-/* Track (scrollbar background) */
 ::-webkit-scrollbar-track {
-  background: rgba(200, 230, 201, 0.5); /* Translucent soft green */
+  background: rgba(200, 230, 201, 0.5);
   border-radius: 15px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05); /* Refined shadow effect */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Handle (scrollbar thumb) */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    45deg,
-    #4caf50,
-    #2e7d32
-  ); /* More dynamic gradient */
+  background: linear-gradient(45deg, #4caf50, #2e7d32);
   border-radius: 15px;
-  border: 3px solid rgba(232, 245, 233, 0.7); /* Soft, translucent border */
+  border: 3px solid rgba(232, 245, 233, 0.7);
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Professional depth effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* Hover State */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    45deg,
-    #81c784,
-    #388e3c
-  ); /* Softer hover gradient */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced hover shadow */
+  background: linear-gradient(45deg, #81c784, #388e3c);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Active State */
 ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(
-    45deg,
-    #66bb6a,
-    #1b5e20
-  ); /* Deeper active gradient */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Pressed effect */
+  background: linear-gradient(45deg, #66bb6a, #1b5e20);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Firefox Scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: #4caf50 rgba(232, 245, 233, 0.5);
+  scroll-behavior: smooth;
 }
 
-/* Advanced Scroll Animation */
 @keyframes scrollGradient {
   0% {
     background-position: 0% 50%;
@@ -91,12 +66,6 @@ html {
   }
 }
 
-::-webkit-scrollbar-thumb {
-  background-size: 200% 200%;
-  animation: scrollGradient 12s ease infinite, pulse 3s infinite alternate; /* Added subtle pulse effect */
-}
-
-/* Pulse Animation for Subtle Interaction Hint */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -109,7 +78,79 @@ html {
   }
 }
 
-/* Optional: Smooth Scroll Behavior */
-html {
-  scroll-behavior: smooth;
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f4fcf6, #edf9f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#loader .plant {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  position: relative;
+  animation: growPlant 1.5s ease-in-out infinite;
+}
+
+#loader .plant::before,
+#loader .plant::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #81c784, #388e3c);
+}
+
+#loader .plant::before {
+  top: -25px;
+  left: 5px;
+  animation: leafSpin 2s ease-in-out infinite;
+}
+
+#loader .plant::after {
+  top: -25px;
+  left: -25px;
+  animation: leafSpinReverse 2s ease-in-out infinite;
+}
+
+@keyframes growPlant {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes leafSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes leafSpinReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+body.loaded #loader {
+  display: none;
 }

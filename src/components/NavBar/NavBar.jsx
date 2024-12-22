@@ -11,6 +11,7 @@ import { auth } from "../../../firebaseConfig";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
+import logo_img from './../../../Logo_img.png';
 
 const NavBarMenu = ({ role }) => (
   <ul>
@@ -163,7 +164,7 @@ const NavBar = ({ cartItemCount }) => {
 
   return (
     <div className="navbar">
-      <img src="agro" className="navbar-logo" alt="Logo" />
+      <img src={logo_img} className="navbar-logo" alt="Logo" />
       <div className="navbar-menu">
         <NavBarMenu role={role} />
       </div>
